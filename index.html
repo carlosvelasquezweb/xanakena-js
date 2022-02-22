@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de cuotas | Xanakena</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+    <main class="container ">
+        <!--Titulo-->
+        <br>
+        <div class="row flex-center">
+            <h1><span class="span-titles">S</span>imulador de prestamos</h1>
+        </div>
+        <hr>
+        <!--Generador-->
+        <div id="generador">
+            <p>El presente simulador de préstamos es una herramienta orientativa que proporciona un resultado según
+                información proporcionada por el interesado que no fue constatada formalmente por <em>Xanakena SA.</em>
+            </p>
+            <hr>
+            <!--Notificaciones-->
+            <div id="notification"></div>
+            <br>
+            <!--Formulario -->
+            <form id="formulario">
+
+
+                <!--Input Nombre -->
+                <div class="row flex-center">
+                    <div class="six columns">
+                        <label for="nombreInput">Nombre y Apellido:</label>
+                        <input class="u-full-width" type="text" placeholder="Carlos Velasquez" id="nombreInput"
+                            required>
+                    </div>
+                </div>
+                <!--Input Monto-->
+                <div class="row flex-center">
+                    <div class="six columns">
+                        <label for="montoInput">Monto:</label>
+                        <input class="u-full-width" type="number" placeholder="10.000" id="montoInput" required>
+                    </div>
+                </div>
+                <!--Cuotas-->
+                <div class="row flex-center">
+                    <div class="six columns">
+                        <label for="cuotas">Cantidad de Cuotas:</label>
+                        <select class="u-full-width" id="cuotasInput" required>
+                            <option value="">Seleccionar</option>
+                            <option value="1">1 cuota</option>
+                            <option value="3">3 cuotas</option>
+                            <option value="6">6 cuotas</option>
+                            <option value="12">12 cuotas</option>
+                            <option value="24">24 cuotas</option>
+                            <option value="48">48 cuotas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--Button Calcular-->
+                <div class="row flex-center">
+                    <div class="six columns">
+                        <input id="boton-calcular" type="button" class="button button-primary u-full-width"
+                            value="Calcular">
+                    </div>
+                </div>
+
+                <div class="row flex-center">
+                    <div class="six columns">
+                        <input id="boton-cotizados" type="button" class="button button-primary u-full-width"
+                            value="Cotizaciones anteriores">
+                    </div>
+            </form>
+        </div>
+        <!--Section que muestra el contenido de la cotización-->
+        <section id="mostrar"></section>
+
+
+        <div id="container-ver">
+            <div class="row flex-center">
+                <div class="six columns">
+                    <div id="volver"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!--JS Propios-->
+
+    <script src="js/funciones.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
