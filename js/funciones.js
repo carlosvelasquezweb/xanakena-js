@@ -172,15 +172,13 @@ function crearEstructura() {
         </div>
     </div>
     
-</div>
-    
-    `);
+</div>`);
 }
 
 
 
-/* 
--------------------------------------------------------*/
+/* Función con los condicionales para invocar las cotizaciónes segun el caso.  
+---------------------------*/
 function cantidadCotizaciones() {
 
     const cantidad = dataBase.length;
@@ -202,22 +200,18 @@ function cantidadCotizaciones() {
 
     }
     if (cantidad > 1) {
-        $('#formulario').hide(1200)
+        $('#formulario').hide(1200);
         let mensaje = 'Esta visualizando el total de cotizaciones anteriores en nuestro sistema';
         alerta(mensaje);
         cerrarAlert();
         recorrerDataBase();
         botonVolver();
     }
-
-
-
 }
 
 
 /* Borrar inputs
 ---------------------------*/
-
 function borrarInputs() {
     //Muestra nuevamente la estructura del formulario
     $('#formulario').show(1000);
@@ -235,7 +229,10 @@ function borrarInputs() {
     $('#container-ver').html('');
 }
 
-
+/* Función para mostras las cotizaciones anteriores en el sistema.
+- Crea la estructura
+- Inserta los datos 
+---------------------------------*/
 function recorrerDataBase() {
 
     crearEstructura();
@@ -273,7 +270,11 @@ function recorrerDataBase() {
     }
 }
 
+/* Botón para volver al simulador.
 
+- Cuando la función se invoca crea el botón para volver. 
+- Cuando se presiona el botón borra los valores del formulario. 
+------------------------------------*/
 function botonVolver() {
 
     $('#container-ver').html(`
@@ -284,11 +285,15 @@ function botonVolver() {
     value='Volver'>
      </div>`);
 
-
+    //Con el clic invoca la función borrar inputs
     $('#boton-borrar').on('click', borrarInputs);
 
 }
 
+/* Función que le da las animaciones a las notificaciones
+- Aparecer 
+- Desaparecer
+-------------------------------------*/
 function cerrarAlert() {
     //Elimina automaticamente la notificación pasados 3 segundos
     setTimeout(function () {
